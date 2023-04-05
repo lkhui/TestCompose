@@ -7,8 +7,8 @@ services:
     ports:
       - "27017:27017"
     volumes:
-      - my_mongo_data:/data/db
-      # - ./somewhere/data:/data/db # will create folder next to the compose file.
+      # - my_mongo_data:/data/db
+      - ./somewhere/data:/data/db # will create folder next to the compose file.
     networks:
       - my_mongo_network
     environment:
@@ -33,6 +33,6 @@ networks:
 
 volumes:
   my_mongo_data:
-    external: false 
+    external: false # will create if missing
     # external: true # need to create volume by your own
 
