@@ -1,0 +1,9 @@
+services:
+  sql:
+    environment:
+      SA_PASSWORD: "Password!23"
+
+
+volumes:
+  mssql_data:
+    external: false
